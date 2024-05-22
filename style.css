@@ -7,7 +7,7 @@ body{
 
 header{
   display: flex;
-  height: 45px;
+  height: 55px;
   flex-direction: row;
   position: sticky;
   top: 0;
@@ -27,7 +27,7 @@ header{
 }
 
 .icon-fb{
- width: 32px;
+ width: 40px;
  margin-left: 15px;
  margin-right: 20px;
 }
@@ -48,12 +48,12 @@ header{
 .search-bar{
   background-color: rgb(240, 237, 237);
   margin-left: -35px;
-  padding: 9px;
+  padding: 12px;
   padding-left: 35px;
   border-width: 0;
   border-radius: 20px;
   width: 180px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .search-bar:focus {
@@ -62,7 +62,7 @@ header{
 }
 
 .header-middle{
-  width: 550px;
+  width: 700px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   align-items: center;
@@ -95,7 +95,8 @@ header{
 .icon-menu, .icon-messages, .icon-notifications, .icon-account{
   background-color: rgb(240, 237, 237);
   border-radius: 20px;
-  padding: 10px;
+  font-size: 20px;
+  padding: 12px;
   cursor: pointer;
   margin-right: 5px;
 }
@@ -127,7 +128,7 @@ main{
 .sidebar-left{
   flex: 1;
   position: sticky;
-  top: 45px;
+  top: 55px;
   align-self: flex-start; 
   display: flex;
 }
@@ -135,15 +136,14 @@ main{
 .sidebar-right{
   flex: 1;
   position: sticky;
-  top: 45px;
+  top: 55px;
   align-self: flex-start;
   display: flex;
 }
 
 .feed{
-  width: 550px;
+  width: 700px;
   margin-right: 5px;
-  background-color: white;
 }
 
 .left-empty, .right-empty{
@@ -151,7 +151,7 @@ main{
 }
 
 .left-content, .right-content{
-  width: 300px;
+  width: 350px;
 }
 
 .sidebar-menu{
@@ -159,11 +159,12 @@ main{
   padding-bottom: 5px;
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
 }
 
 .sidebar-menu-item{
   flex: 1;
-  padding: 10px 40px 10px 6px;
+  padding: 10px 40px 10px 10px;
   cursor: pointer;
   margin-bottom: 2px;
   display: grid;
@@ -174,14 +175,15 @@ main{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
+  font-size: 25px;
+
 }
 
 .sidebar-menu-item span{
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 600;
   margin-left: 10px;
-  color: rgb(86, 86, 86);
+  color: rgb(35, 35, 35);
 }
 
 .sidebar-menu-item:first-child{
@@ -203,14 +205,15 @@ main{
 
 .sidebar-groups{
   padding-top: -10px;
-  color: rgba(77, 77, 77, 0.577);
+  color: rgba(52, 52, 52, 0.577);
   font-size: 15px;
-  font-weight: bold;
+
 }
 
 .sidebar-groups p{
-  font-size: 13px;
+  font-size: 16px;
   margin-left: 6px;
+  font-weight: bold;
 }
 
 .group-item{
@@ -222,6 +225,8 @@ main{
   justify-items: center;
   align-items: center;
   cursor: pointer;
+  margin-bottom: 13px;
+  font-weight: bold;
 }
 
 .group-item:hover{
@@ -230,15 +235,22 @@ main{
 }
 
 .group-item img{
-  width: 30px;
+  width: 40px;
   border-radius: 5px;
+}
+
+.group-item i{
+  font-size: 24px;
+  padding: 13px;
+  color: rgb(35, 35, 35);
 }
 
 .group-item p{
   flex: 5;
   padding-left: 10px;
-  font-size: 12px;
-  color: rgba(77, 77, 77, 0.887);
+  font-size: 14px;
+  color: rgb(35, 35, 35);
+  font-weight: 500;
 }
 
 .right-content{
@@ -252,6 +264,14 @@ main{
   flex-direction: column;
   border-bottom: 1px solid rgb(179, 179, 179);
 }
+
+.advertisement p{
+  font-weight: 600;
+  font-size: 18px;
+  color: rgb(131, 131, 131);
+  margin-bottom: 0;
+}
+
 .ad-item{
   flex: 1;
   display: flex;
@@ -259,13 +279,18 @@ main{
   align-items: center;
   flex-direction: row;
   cursor: pointer;
+  margin-top: 10px;
+}
+
+.ad-item:last-child{
+  margin-bottom: 10px;
 }
 
 .ad-item img{
   flex: 1;
   width: 140px;
   height: 70px;
-  padding: 3px;
+  padding: 5px;
   border-radius: 20px;
 }
 
@@ -276,11 +301,15 @@ main{
 }
 
 .ad-text h3{
-  font-size: 14px;
+  font-size: 16px;
+  color: rgb(90, 90, 90);
 }
 
 .ad-text p{
-  font-size: 10px;
+  font-size: 14px;
+  margin-top: -10px;
+  color: rgb(118, 118, 118);
+  font-weight: normal;
 }
 
 .ad-item:hover{
@@ -288,13 +317,117 @@ main{
   border-radius: 20px;
 }
 
+.stories{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  height: 250px;
+  gap: 15px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.story-container{
+  flex: 1;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+
+.story-container::before, .story-container-mine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(128, 128, 128, 0.5); /* This is a semi-transparent grey */
+  opacity: 0;
+  transition: opacity 0.1s; /* This adds a smooth transition */
+  border-radius: 20px;
+}
+
+.story-container:hover::before, .story-container-mine:hover::before {
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.stories p{
+  font-size: 12px;
+  margin-top: -30px;
+  color: rgb(243, 243, 243);
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: left;
+  padding-left: 10px;
+  text-wrap: wrap;
+  overflow: hidden;
+}
+
+.story-container-mine{
+  flex: 1;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 18px;
+}
+
+
+.stories img{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+
+.story-container-mine p{
+  background-color: white;
+  border-radius: 18px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  color: rgb(90, 90, 90);
+  font-weight: 500;
+  font-size: 14px;
+  text-shadow: none;;
+  text-align: center;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  width: 100%;
+  height: 40px;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.story-container-mine i{
+  position: absolute;
+  bottom: 30px;
+  left: 60px;
+  color: rgb(36, 117, 248);
+  background-color: white;
+  border-radius: 20px;
+  padding: 4px;
+  font-size: 30px;
+
+
+}
+
+
+
 @media screen and (max-width: 1000px){
   .header-middle{
     display: none;
   }
+
   .feed{
-    width: 100%;
+    margin: 0 20%;
   }
+ 
   .sidebar-left, .sidebar-right{
     display: none;
   }
